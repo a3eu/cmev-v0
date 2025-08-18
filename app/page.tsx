@@ -15,18 +15,10 @@ export default function HomePage() {
           }}
         />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6">Where Music Lives</h1>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6">¡Con música en vivo!</h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Supporting live performances and training in Argentine Tango and Chamber Music across the SF Bay Area
+            Life is better with live music!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6">
-              Join Our Community
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
-              Upcoming Events
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -35,7 +27,6 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Upcoming Events</h2>
-            <p className="text-lg text-muted-foreground">Join us for our next performances and workshops</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -43,21 +34,21 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <Calendar className="w-6 h-6 text-primary" />
-                  <span className="text-sm text-muted-foreground">March 15, 2025</span>
+                  <span className="text-sm text-muted-foreground">September 6, 2025</span>
                 </div>
-                <CardTitle className="font-serif text-xl">Chamber Music House Concert</CardTitle>
+                <CardTitle className="font-serif text-xl">Tango Night at Feeling Flow (Palo Alto)</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-2 mb-2">
                   <Clock className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">7:30 PM</span>
+                  <span className="text-sm text-muted-foreground">5:30&ndash;9PM (live music at 7PM)</span>
                 </div>
                 <div className="flex items-center gap-2 mb-4">
                   <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">Private Residence, Berkeley</span>
+                  <span className="text-sm text-muted-foreground">1680 Bryant St, Palo Alto</span>
                 </div>
                 <CardDescription className="mb-4">
-                  An intimate evening featuring Cuarteto ¡Ahora, sí! performing works by Brahms and Piazzolla
+                  Solos, duets, and trios performed by Special guest Yukie (Japan) and the Duo <i>Luz de neón</i>.
                 </CardDescription>
                 <Button variant="outline" className="w-full bg-transparent">
                   Learn More
