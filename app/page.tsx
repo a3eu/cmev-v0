@@ -253,12 +253,16 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="overflow-hidden">
-              <div
-                className="h-48 bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/argentine-tango-orchestra.png')",
-                }}
-              />
+              <div className="relative w-full aspect-video">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/uHfkAfNkTUc"
+                  title="Orquesta Típica Tarareando"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="font-serif text-xl">Orquesta Típica Tarareando</CardTitle>
               </CardHeader>
