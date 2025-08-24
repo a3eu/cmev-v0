@@ -388,7 +388,7 @@ export default function HomePage() {
 
           {/* Newsletter Signup */}
           <Card className="p-0 overflow-hidden">
-            <div className="relative w-full h-96">
+            <div className="relative w-full h-96 bg-amber-200">
               <iframe 
                 title="Signup form powered by Zeffy" 
                 style={{

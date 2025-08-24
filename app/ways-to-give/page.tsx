@@ -1,14 +1,25 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
 import Link from "next/link";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
+
+const initialOptions = {
+  "client-id": "BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA",
+  currency: "USD",
+  intent: "capture",
+  "enable-funding": "venmo"
+};
 
 export default function WaysToGivePage() {
   return (
-    <div className="min-h-screen bg-[#b0c4c4]">
-      <PageHeader title="Ways to Give" />
+    <PayPalScriptProvider options={initialOptions}>
+      <div className="min-h-screen bg-[#b0c4c4]">
+        <PageHeader title="Ways to Give" />
       
       {/* Introduction */}
       <section className="py-20 px-4 bg-[#f0f8f8]">
@@ -29,11 +40,11 @@ export default function WaysToGivePage() {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Ways to Contribute</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* One-Time Donation */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Donation */}
             <Card className="p-6">
               <CardHeader className="text-center">
-                <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CreditCard className="w-12 h-12 text-primary mx-auto mb-4" />
                 <CardTitle className="font-serif text-2xl mb-2">Donate Online</CardTitle>
                 <CardDescription className="text-base">
                   Your tax-deductible gift directly funds live performances
@@ -48,54 +59,33 @@ export default function WaysToGivePage() {
                 <Button className="w-full mb-4">By credit card
                   <Link href={`https://www.zeffy.com/en-US/donation-form/support-live-music`}>(processed by Zeffy)</Link>
                 </Button>
-                <p className="text-sm text-muted-foreground">
-                  Secure online donation processing
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Secure online donation processing
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Monthly Giving */}
-            <Card className="p-6 border-primary">
-              <CardHeader className="text-center">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-serif text-2xl mb-2">Monthly Sustainer</CardTitle>
-                <CardDescription className="text-base">
-                  Join our community of monthly supporters
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
                 <p className="text-muted-foreground mb-6">
-                  Become a monthly sustainer and help us plan ahead. Regular giving provides stable funding 
-                  for our ongoing programs and allows us to expand our reach.
                 </p>
-                <Button className="w-full mb-4">Become a Sustainer</Button>
-                <p className="text-sm text-muted-foreground">
-                  Cancel or modify anytime
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Honor/Memorial Gifts */}
-            <Card className="p-6">
-              <CardHeader className="text-center">
-                <Music className="w-12 h-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-serif text-2xl mb-2">Honor & Memorial Gifts</CardTitle>
-                <CardDescription className="text-base">
-                  Celebrate or remember someone special through music
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground mb-6">
-                  Make a gift in honor or memory of someone who loved music. We'll send a personalized 
-                  acknowledgment to you and the honoree or family.
-                </p>
-                <Button variant="outline" className="w-full mb-4">Give in Honor</Button>
-                <p className="text-sm text-muted-foreground">
-                  Personalized acknowledgment cards available
-                </p>
+                <PayPalButtons
+                    createOrder={(data, actions) => {
+                      return actions.order.create({
+                        purchase_units: [
+                          {
+                            amount: {
+                              value: "100.00", // Default donation amount
+                            },
+                          },
+                        ],
+                      });
+                    }}
+                    onApprove={(data, actions) => {
+                      return actions.order.capture().then((details) => {
+                        const name = details.payer.name.given_name;
+                        alert(`Transaction completed by ${name}`);
+                      });
+                    }}
+                    style={{
+                      layout: "vertical",
+                      color: "gold",
+                      shape: "rect",
+                      label: "donate"
+                    }}
+                />
               </CardContent>
             </Card>
 
@@ -105,17 +95,34 @@ export default function WaysToGivePage() {
                 <Building className="w-12 h-12 text-primary mx-auto mb-4" />
                 <CardTitle className="font-serif text-2xl mb-2">Corporate Sponsorship</CardTitle>
                 <CardDescription className="text-base">
-                  Partner with us to support the arts in your community
+                  Partner with us to support live music in your community!
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-muted-foreground mb-6">
                   Corporate sponsors receive recognition at events, in programs, and on our website. 
-                  Multiple sponsorship levels available to fit your budget and goals.
                 </p>
-                <Button variant="outline" className="w-full mb-4">Learn More</Button>
-                <p className="text-sm text-muted-foreground">
-                  Contact us for sponsorship opportunities
+                <p className="text-muted-foreground mb-6">
+                  Email info@conmusicaenvivo.org to explore sponsorship opportunities
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Other Sponsorship */}
+            <Card className="p-6">
+              <CardHeader className="text-center">
+                <Gift className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl mb-2">Other Giving</CardTitle>
+                <CardDescription className="text-base"></CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground mb-6">
+                  We will be honored if you donated to us through a donor-advised fund
+                  or your employer's matching fund program.
+                </p>
+                <p className="text-muted-foreground mb-6">
+                  Please reach out if you would like to host a fundraising event for us,
+                  offer a matching gift, make a gift in honor of someone, ro sponsor a specific program.
                 </p>
               </CardContent>
             </Card>
@@ -138,7 +145,7 @@ export default function WaysToGivePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm">
-                  Donate instruments, equipment, or professional services to support our programs.
+                  Donate instruments, equipment, or professional services to support our work.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -177,15 +184,13 @@ export default function WaysToGivePage() {
           <p className="text-lg text-muted-foreground mb-8">
             We're here to help you find the best way to support our mission. 
             Contact us to discuss donation options or learn more about our programs.
+            Email: info@conmusicaenvivo.org
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">Contact Us</Button>
-            <Button variant="outline" size="lg">Email: info@conmusicaenvivo.org</Button>
-          </div>
         </div>
       </section>
       
-      <PageFooter />
-    </div>
+        <PageFooter />
+      </div>
+    </PayPalScriptProvider>
   )
 }
