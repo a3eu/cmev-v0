@@ -10,7 +10,7 @@ export default function MusiciansPage() {
       <PageHeader title="Our Musicians" />
       
       {/* Content */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -21,7 +21,7 @@ export default function MusiciansPage() {
       </section>
 
       {/* Musicians Bios */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Musician 1 */}

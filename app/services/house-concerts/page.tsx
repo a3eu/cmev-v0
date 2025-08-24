@@ -9,7 +9,7 @@ export default function HouseConcertsPage() {
       <PageHeader title="House Concerts" />
 
       {/* Service Details */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-4xl mx-auto">
 
           <div className="prose prose-lg max-w-none mb-12">

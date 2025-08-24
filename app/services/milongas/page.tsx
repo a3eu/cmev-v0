@@ -9,7 +9,7 @@ export default function MilongasPage() {
       <PageHeader title="Milongas" />
 
       {/* Service Details */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">Milongas with live music are special!</p>

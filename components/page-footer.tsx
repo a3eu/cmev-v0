@@ -42,7 +42,7 @@ export default function PageFooter() {
             <h4 className="font-semibold mb-4">Get Involved</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#donate" className="text-white/80 hover:text-white transition-colors">
+                <Link href="/ways-to-give" className="text-white/80 hover:text-white transition-colors">
                   Donate
                 </Link>
               </li>

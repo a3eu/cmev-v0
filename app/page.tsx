@@ -51,9 +51,9 @@ export default function HomePage() {
               </Link>
             </li>
             <li>
-              <a href="#donate" className="hover:text-white/80 transition-colors font-medium">
+              <Link href="/ways-to-give" className="hover:text-white/80 transition-colors font-medium">
                 Support
-              </a>
+              </Link>
             </li>
             <li>
               <Link href="/blog" className="hover:text-white/80 transition-colors font-medium">
@@ -65,7 +65,7 @@ export default function HomePage() {
       </nav>
 
       {/* Upcoming Events */}
-      <section id="events" className="py-20 px-4 bg-white">
+      <section id="events" className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Upcoming Events</h2>
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-white">
+      <section id="about" className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
@@ -244,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-white">
+      <section id="projects" className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Projects</h2>
@@ -291,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* Past Events Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Past Events</h2>
@@ -324,7 +324,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
@@ -351,7 +351,7 @@ export default function HomePage() {
       </section>
 
       {/* Support Section */}
-      <section id="donate" className="py-20 px-4 bg-white">
+      <section id="donate" className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Support Our Mission</h2>
           <p className="text-lg text-muted-foreground mb-12">
@@ -370,7 +370,7 @@ export default function HomePage() {
             <Card className="p-6 text-center">
               <CardTitle className="font-serif text-xl mb-4">Donate</CardTitle>
               <CardDescription className="mb-4">Support our musicians and educational programs</CardDescription>
-              <Button>Make a Donation</Button>
+              <Button asChild><Link href="/ways-to-give">Make a Donation</Link></Button>
             </Card>
 
             <Card className="p-6 text-center">
@@ -436,9 +436,9 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Get Involved</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#donate" className="text-muted-foreground hover:text-primary">
+                  <Link href="/ways-to-give" className="text-muted-foreground hover:text-primary">
                     Donate
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -21,7 +21,7 @@ export default function BlogPage() {
       <PageHeader title="Blog" />
 
       {/* Blog Posts */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#f0f8f8]">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
             {/* Concert Recap Post */}

@@ -54,7 +54,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
               </Link>
             </li>
             <li>
-              <Link href="/#donate" className="hover:text-white/80 transition-colors font-medium">
+              <Link href="/ways-to-give" className="hover:text-white/80 transition-colors font-medium">
                 Support
               </Link>
             </li>
