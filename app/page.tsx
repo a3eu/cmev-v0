@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Calendar, Music, Piano, Users, NotebookPen, MapPin, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -27,7 +28,7 @@ export default function HomePage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 px-4">
+      <section id="events" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Upcoming Events</h2>
@@ -154,7 +155,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4">
+      <section id="about" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
@@ -206,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section id="projects" className="py-20 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Projects</h2>
@@ -282,10 +283,10 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              <a href="/blog" className="text-lg px-4">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/blog" className="text-lg px-4">
                 Read Our Blog
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
@@ -310,7 +311,7 @@ export default function HomePage() {
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardTitle className="font-serif text-lg mb-4">{service.name}</CardTitle>
                 <Button variant="outline" size="sm" asChild>
-                  <a href={`/services/${service.slug}`}>Learn More</a>
+                  <Link href={`/services/${service.slug}`}>Learn More</Link>
                 </Button>
               </Card>
             ))}
@@ -319,7 +320,7 @@ export default function HomePage() {
       </section>
 
       {/* Support Section */}
-      <section className="py-20 px-4">
+      <section id="donate" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Support Our Mission</h2>
           <p className="text-lg text-muted-foreground mb-12">
@@ -332,7 +333,7 @@ export default function HomePage() {
               <CardDescription className="mb-4">
                 Experience the magic of live music at our intimate venues
               </CardDescription>
-              <Button variant="outline">View Calendar</Button>
+              <Button variant="outline" asChild><a href="#events">View Calendar</a></Button>
             </Card>
 
             <Card className="p-6 text-center">
@@ -344,7 +345,7 @@ export default function HomePage() {
             <Card className="p-6 text-center">
               <CardTitle className="font-serif text-xl mb-4">Host an Event</CardTitle>
               <CardDescription className="mb-4">Bring live music to your home or venue</CardDescription>
-              <Button variant="outline">Learn More</Button>
+              <Button variant="outline" asChild><Link href="/services/house-concerts">Learn More</Link></Button>
             </Card>
           </div>
 
@@ -378,24 +379,24 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <a href="#about" className="text-muted-foreground hover:text-primary">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <a href="#events" className="text-muted-foreground hover:text-primary">
                     Events
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <a href="#projects" className="text-muted-foreground hover:text-primary">
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="/musicians" className="text-muted-foreground hover:text-primary">
+                  <Link href="/musicians" className="text-muted-foreground hover:text-primary">
                     Musicians
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -404,7 +405,7 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Get Involved</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <a href="#donate" className="text-muted-foreground hover:text-primary">
                     Donate
                   </a>
                 </li>

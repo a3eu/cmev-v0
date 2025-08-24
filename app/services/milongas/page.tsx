@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Music2, Heart, Users, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function MilongasPage() {
   return (
@@ -9,10 +10,10 @@ export default function MilongasPage() {
       <section className="py-12 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <Button variant="ghost" asChild className="mb-6">
-            <a href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               Back to Home
-            </a>
+            </Link>
           </Button>
           <div className="text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Milongas</h1>

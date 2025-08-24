@@ -180,14 +180,14 @@ export default function BlogPage() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Link href="/#events" className="text-muted-foreground hover:text-primary">
                     Events
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Link href="/#projects" className="text-muted-foreground hover:text-primary">
                     Projects
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -196,19 +196,14 @@ export default function BlogPage() {
               <h4 className="font-semibold mb-4">Get Involved</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Link href="/#donate" className="text-muted-foreground hover:text-primary">
                     Donate
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    Volunteer
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
+                  <Link href="/services/house-concerts" className="text-muted-foreground hover:text-primary">
                     Host Event
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
