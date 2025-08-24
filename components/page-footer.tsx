@@ -7,9 +7,6 @@ export default function PageFooter() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'Kaushan Script, cursive'}}>¡Con música en vivo!</h3>
-            <p className="text-sm text-white/80">
-              Supporting live performances and training in Argentine Tango and Chamber Music
-            </p>
           </div>
 
           <div>

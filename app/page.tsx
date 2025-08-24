@@ -200,7 +200,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Our mission is to support live performances and training in Argentine Tango and Modern Chamber Music throughout the San Francisco Bay Area and beyond
+              Our mission is to support live performances and education in Argentine Tango and Modern Chamber Music throughout the San Francisco Bay Area and beyond
             </p>
           </div>
 
@@ -271,16 +271,15 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Traditional Argentine tango orchestra bringing authentic sounds of Buenos Aires to the Bay Area
+                  Traditional Argentine Tango orchestra bringing authentic sounds of Buenos Aires to the Bay Area and beyond
                 </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden">
-              <div
-                className="h-48 bg-cover bg-center"
+              <div className="relative w-full aspect-video bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('/intimate-violin-piano-duo.png')",
+                  backgroundImage: "url('/luz-de-neon-publicity-1.jpg')",
                 }}
               />
               <CardHeader>
@@ -288,7 +287,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Intimate duo performances blending classical technique with tango passion
+                  Piano/bandoneón/voice duet.
                 </CardDescription>
               </CardContent>
             </Card>
