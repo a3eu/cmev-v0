@@ -360,7 +360,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Support Our Mission</h2>
           <p className="text-lg text-muted-foreground mb-12">
-            Help us continue bringing the beauty of Argentine Tango and Chamber Music to our community
+            Help us continue bringing the beauty of Argentine Tango and Chamber Music to the community
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
