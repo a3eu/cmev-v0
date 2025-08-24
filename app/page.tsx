@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Music, Piano, Users, NotebookPen, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
+import PageFooter from "@/components/page-footer"
 
 export default function HomePage() {
   return (
@@ -408,66 +409,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#3e7a7a] text-white py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'Kaushan Script, cursive'}}>¡Con música en vivo!</h3>
-              <p className="text-sm text-muted-foreground">
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#about" className="text-muted-foreground hover:text-primary">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#events" className="text-muted-foreground hover:text-primary">
-                    Events
-                  </a>
-                </li>
-                <li>
-                  <a href="#projects" className="text-muted-foreground hover:text-primary">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <Link href="/musicians" className="text-muted-foreground hover:text-primary">
-                    Musicians
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Get Involved</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/ways-to-give" className="text-muted-foreground hover:text-primary">
-                    Donate
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Email info@conmusicaenvivo.org</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center">
-            <p className="text-sm text-muted-foreground">© 2025 ¡Con música en vivo! All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <PageFooter />
     </div>
   )
 }
