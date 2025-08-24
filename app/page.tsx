@@ -380,30 +380,24 @@ export default function HomePage() {
           </div>
 
           {/* Newsletter Signup */}
-          <Card className="p-8">
-            <CardHeader className="text-center">
-              <CardTitle className="font-serif text-2xl mb-2">Join Our Mailing List</CardTitle>
-              <CardDescription>Stay updated on upcoming performances, workshops, and community events</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="relative w-full h-96 max-w-md mx-auto">
-                <iframe 
-                  title="Signup form powered by Zeffy" 
-                  style={{
-                    position: 'absolute',
-                    border: 0,
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                    width: '100%',
-                    height: '100%'
-                  }}
-                  src="https://www.zeffy.com/en-US/embed/newsletter-form/join-our-mailing-list-4" 
-                  allowTransparency={true}
-                />
-              </div>
-            </CardContent>
+          <Card className="p-0 overflow-hidden">
+            <div className="relative w-full h-96">
+              <iframe 
+                title="Signup form powered by Zeffy" 
+                style={{
+                  position: 'absolute',
+                  border: 0,
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  width: '100%',
+                  height: '100%'
+                }}
+                src="https://www.zeffy.com/en-US/embed/newsletter-form/join-our-mailing-list-4" 
+                allowTransparency={true}
+              />
+            </div>
           </Card>
         </div>
       </section>
