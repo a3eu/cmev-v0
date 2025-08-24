@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Calendar, Music, Piano, Users, NotebookPen, MapPin, Clock } from "lucide-react"
 import Link from "next/link"
 
@@ -387,9 +386,22 @@ export default function HomePage() {
               <CardDescription>Stay updated on upcoming performances, workshops, and community events</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <Input type="email" placeholder="Enter your email" className="flex-1" />
-                <Button>Subscribe</Button>
+              <div className="relative w-full h-96 max-w-md mx-auto">
+                <iframe 
+                  title="Signup form powered by Zeffy" 
+                  style={{
+                    position: 'absolute',
+                    border: 0,
+                    top: 0,
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    width: '100%',
+                    height: '100%'
+                  }}
+                  src="https://www.zeffy.com/en-US/embed/newsletter-form/join-our-mailing-list-4" 
+                  allowTransparency={true}
+                />
               </div>
             </CardContent>
           </Card>
