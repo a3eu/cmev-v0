@@ -27,78 +27,13 @@ export default function MilongasPage() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A milonga is more than just a dance event—it's a cultural experience that captures the essence of
-              Argentine tango. These social gatherings bring together dancers of all levels to share in the passion and
-              connection that defines tango. With live music from our talented musicians, each milonga becomes a
-              celebration of this beautiful art form.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Milongas with live music are special!</p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">¡Con música en vivo! can bring an authentic tango ensemble to your event.
+              While the full orchestra is more exciting to listen to, the minimal group for danceable repertoire is a quartet (violin, bandoneón, piano, and double bass).
             </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">Email info@conmjusicaenvivo.org for more information.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card>
-              <CardHeader>
-                <Music2 className="w-8 h-8 text-primary mb-4" />
-                <CardTitle className="font-serif text-xl">Live Tango Music</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Dance to authentic Argentine tango performed by our professional musicians, creating an unmatched
-                  atmosphere
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Heart className="w-8 h-8 text-primary mb-4" />
-                <CardTitle className="font-serif text-xl">Authentic Experience</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Experience the true spirit of Buenos Aires tango culture in the heart of the Bay Area
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Users className="w-8 h-8 text-primary mb-4" />
-                <CardTitle className="font-serif text-xl">All Levels Welcome</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Whether you're a beginner or experienced dancer, our milongas provide a welcoming environment for all
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <Clock className="w-8 h-8 text-primary mb-4" />
-                <CardTitle className="font-serif text-xl">Regular Events</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Join us for monthly milongas and special themed events throughout the year
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-
-          <Card className="p-8">
-            <CardHeader className="text-center">
-              <CardTitle className="font-serif text-2xl mb-4">Join Our Next Milonga</CardTitle>
-              <CardDescription className="text-lg">
-                Experience the magic of tango with live music and passionate dancers
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <Button size="lg" className="mt-4">
-                View Upcoming Events
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>

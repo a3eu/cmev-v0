@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Calendar, Music, Users, Heart, MapPin, Clock } from "lucide-react"
+import { Calendar, Music, Piano, Users, NotebookPen, MapPin, Clock } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -11,10 +13,12 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
-            backgroundImage: "url('/chamber-tango-intimate.png')",
+            // backgroundImage: "url('/chamber-tango-intimate.png')",
+            backgroundImage: "url('/cmev-logo-web-1.png')",
           }}
         />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <div >¡Con música en vivo!</div>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground mb-6">¡Con música en vivo!</h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Life is better with live music!
@@ -50,7 +54,10 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Solos, duets, and trios performed by Special guest Yukie (Japan) and the Duo <i>Luz de neón</i>.
                 </CardDescription>
-                <Button variant="outline" className="w-full bg-transparent">
+                <Button variant="outline"
+                        className="w-full bg-transparent"
+                        onClick={() => window.open("https://www.feelingflow.org/tea-tango#register", "_blank")}
+                >
                   Learn More
                 </Button>
               </CardContent>
@@ -60,24 +67,85 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <Calendar className="w-6 h-6 text-primary" />
-                  <span className="text-sm text-muted-foreground">March 22, 2025</span>
+                  <span className="text-sm text-muted-foreground">September 12, 2025</span>
                 </div>
-                <CardTitle className="font-serif text-xl">Tango Milonga Night</CardTitle>
+                <CardTitle className="font-serif text-xl">Orquesta Tarareando at Milonga Genesis</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-2 mb-2">
                   <Clock className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">8:00 PM</span>
+                  <span className="text-sm text-muted-foreground">8:30PM&ndash;12:30AM (live set around 10pm)</span>
                 </div>
                 <div className="flex items-center gap-2 mb-4">
                   <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">Community Center, San Francisco</span>
+                  <span className="text-sm text-muted-foreground">404 Clement St, San Francisco</span>
                 </div>
                 <CardDescription className="mb-4">
-                  Dance the night away with live music from Orquesta Típica Tarareando
+                  Orquesta Típica Tarareando performs at Milonga Genesis in San Francisco
                 </CardDescription>
-                <Button variant="outline" className="w-full bg-transparent">
+                <Button variant="outline"
+                        className="w-full bg-transparent"
+                        onClick={() => window.open("https://sftangowith.us/event/la-milonga-genesis-25-2/2025-09-12/", "_blank")}
+                >
                   Learn More
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <Calendar className="w-6 h-6 text-primary" />
+                  <span className="text-sm text-muted-foreground">September 13, 2025</span>
+                </div>
+                <CardTitle className="font-serif text-xl">Orquesta Tarareando at Milonga Sentimental</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 mb-2">
+                  <Clock className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">8PM&ndash;12:30AM (live set around 9:30PM)</span>
+                </div>
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">217 S Claremont St, San Mateo, CA</span>
+                </div>
+                <CardDescription className="mb-4">
+                  Orquesta Típica Tarareando performs at Milonga Sentimental at the Motion Arts Center in San Mateo
+                </CardDescription>
+                <Button variant="outline"
+                        className="w-full bg-transparent"
+                        onClick={() => window.open("https://motionartscenter.com/milonga-dance-party/", "_blank")}
+                >
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-2">
+                  <Calendar className="w-6 h-6 text-primary" />
+                  <span className="text-sm text-muted-foreground">November 18, 2025</span>
+                </div>
+                <CardTitle className="font-serif text-xl">Orquesta Tarareando in concert at JCC Palo Alto</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 mb-2">
+                  <Clock className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">1&ndash;2PM</span>
+                </div>
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground">1529 S B St. San Mateo, CA</span>
+                </div>
+                <CardDescription className="mb-4">
+                  Orquesta Típica Tarareando presents selections of classic and contemporary tangos.
+                </CardDescription>
+                <Button variant="outline"
+                        className="w-full bg-transparent"
+                        onClick={() => window.open("https://www.paloaltojcc.org/events/argentine-tango-music-that-moves", "_blank")}
+                >
+                  Learn more
                 </Button>
               </CardContent>
             </Card>
@@ -89,10 +157,9 @@ export default function HomePage() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About CMEV</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              CMEV is a SF Bay Area non-profit with a mission to support live performances and training in the genres
-              Argentine Tango and Chamber Music, fostering community through the universal language of music.
+              Our mission is to support live performances and training in Argentine Tango and Modern Chamber Music throughout the San Francisco Bay Area and beyond.
             </p>
           </div>
 
@@ -100,39 +167,40 @@ export default function HomePage() {
             <Card className="text-center">
               <CardHeader>
                 <Music className="w-12 h-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-serif text-2xl">Live Performances</CardTitle>
+                <CardTitle className="font-serif text-2xl">Live Tango for Dancing</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Bringing authentic Argentine Tango and Chamber Music performances to intimate venues across the Bay
-                  Area
+                  Authentic Argentine Tango at tango events
                 </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardHeader>
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+                <Piano className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl">Concerts</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  Showcasing classic and contemporary tango selections in concert settings.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <NotebookPen className="w-12 h-12 text-primary mx-auto mb-4" />
                 <CardTitle className="font-serif text-2xl">Music Education</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Offering lessons in violin, piano, bandoneon, and specialized tango musicality classes
+                  Offering lessons and coaching in tango and chamber music (violin, bandoneón, ensemble),
+                  as well as tango music and musicality seminars for dancers
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-serif text-2xl">Community Building</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  Creating connections through house concerts, milongas, and collaborative musical experiences
-                </CardDescription>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -143,7 +211,6 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Projects</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover our featured ensembles and musical initiatives
             </p>
           </div>
 
@@ -181,40 +248,6 @@ export default function HomePage() {
                 </CardDescription>
               </CardContent>
             </Card>
-
-            <Card className="overflow-hidden">
-              <div
-                className="h-48 bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/placeholder-bcfif.png')",
-                }}
-              />
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">Cuarteto ¡Ahora, sí!</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Dynamic string quartet specializing in contemporary chamber works and tango arrangements
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden">
-              <div
-                className="h-48 bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/bandoneon-player.png')",
-                }}
-              />
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">Solo Bandoneon Series</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Showcasing the soulful voice of the bandoneon through solo performances and masterclasses
-                </CardDescription>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -224,9 +257,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Past Events</h2>
-            <p className="text-lg text-muted-foreground">
-              Celebrating our recent performances and community gatherings
-            </p>
+            <p className="text-lg text-muted-foreground"></p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,58 +265,20 @@ export default function HomePage() {
               <CardHeader>
                 <div className="flex items-center gap-4 mb-2">
                   <Calendar className="w-6 h-6 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">February 18, 2025</span>
+                  <span className="text-sm text-muted-foreground">May 4, 2025</span>
                 </div>
-                <CardTitle className="font-serif text-xl">Valentine's Tango Concert</CardTitle>
+                <CardTitle className="font-serif text-xl">Orquesta Típica Tarareando inaugural concert</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center gap-2 mb-4">
                   <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">Oakland Museum of California</span>
+                  <span className="text-sm text-muted-foreground">Gradus ad Parnassum Music Academy</span>
                 </div>
                 <CardDescription>
-                  A romantic evening featuring Duo Luz de neón performing passionate tangos for Valentine's Day
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
-                  <Calendar className="w-6 h-6 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">January 28, 2025</span>
-                </div>
-                <CardTitle className="font-serif text-xl">Chamber Music Workshop</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">Berkeley Community Center</span>
-                </div>
-                <CardDescription>
-                  Educational workshop on chamber music techniques with hands-on learning for local musicians
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
-                  <Calendar className="w-6 h-6 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">December 15, 2024</span>
-                </div>
-                <CardTitle className="font-serif text-xl">Holiday Milonga</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground">San Francisco Dance Center</span>
-                </div>
-                <CardDescription>
-                  Festive holiday celebration with live tango music and community dancing
-                </CardDescription>
-              </CardContent>
-            </Card>
           </div>
 
           <div className="text-center mt-12">
@@ -303,17 +296,16 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
-            <p className="text-lg text-muted-foreground">Bringing music to your community and home</p>
+            <p className="text-lg text-muted-foreground"></p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "House Concerts", slug: "house-concerts" },
               { name: "Milongas", slug: "milongas" },
-              { name: "Music Lessons", slug: "music-lessons" },
+              { name: "House Concerts", slug: "house-concerts" },
+              { name: "Music Lessons and Coaching", slug: "music-lessons" },
               { name: "Tango Musicality Classes", slug: "tango-musicality" },
-              { name: "Sound Reinforcement", slug: "sound-reinforcement" },
-              { name: "Event Hosting", slug: "event-hosting" },
+              { name: "Sound Reinforcement", slug: "sound" },
             ].map((service, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardTitle className="font-serif text-lg mb-4">{service.name}</CardTitle>
@@ -377,9 +369,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-serif text-xl font-bold mb-4">CMEV</h3>
+              <h3 className="font-serif text-xl font-bold mb-4">¡Con música en vivo!</h3>
               <p className="text-sm text-muted-foreground">
-                Supporting live performances and training in Argentine Tango and Chamber Music
               </p>
             </div>
 
@@ -417,36 +408,19 @@ export default function HomePage() {
                     Donate
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    Volunteer
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    Host Event
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    Partners
-                  </a>
-                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>SF Bay Area</li>
-                <li>info@cmev.org</li>
-                <li>(555) 123-4567</li>
+                <li>Email info@conmusicaenvivo.org</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center">
-            <p className="text-sm text-muted-foreground">© 2025 CMEV. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 ¡Con música en vivo! All rights reserved.</p>
           </div>
         </div>
       </footer>

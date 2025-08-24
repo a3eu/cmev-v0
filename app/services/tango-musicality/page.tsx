@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Home, Users, Music, Calendar } from "lucide-react"
 
-export default function HouseConcertsPage() {
+export default function TangoMusicalityPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -15,9 +15,9 @@ export default function HouseConcertsPage() {
             </a>
           </Button>
           <div className="text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">House Concerts</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Tango Musicality for Dancers</h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Intimate musical experiences in the comfort of your home
+              Knowledge about tango music means special powers on the dance floor
             </p>
           </div>
         </div>
@@ -29,17 +29,7 @@ export default function HouseConcertsPage() {
 
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              House concerts offer a unique and intimate way to experience live music. In the comfort of a private home,
-              audiences can connect with performers and music in a way that's impossible in traditional concert halls.
-              Our house concerts feature Argentine tango and chamber music in settings
-              that foster genuine musical connection.
-            </p>
-          </div>
-
-          <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              There is much flexibility in forming groups for house concerts. The ensemble and the repertoire
-              are tailored to the hosts' circumstances. We hope your house has a nice piano but we can also bring a keyboard.
+              We offer a range of tango musicality training options for dancers.
             </p>
           </div>
 

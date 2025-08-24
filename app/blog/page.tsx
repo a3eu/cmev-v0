@@ -3,6 +3,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calendar, ArrowLeft, Music, Users } from "lucide-react"
 import Link from "next/link"
 
+
+// TODO:
+// DISABLE INITIALLY
+// BEFORE ENABLING:
+// Write blog texts:
+// Concert:
+//  Put videos, photos
+// Making live music fair trade
+
+
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -13,8 +23,8 @@ export default function BlogPage() {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">CMEV Blog</h1>
-          <p className="text-lg text-muted-foreground">Stories, insights, and updates from our musical community</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Blog</h1>
+          <p className="text-lg text-muted-foreground"></p>
         </div>
       </header>
 
@@ -28,16 +38,21 @@ export default function BlogPage() {
                 <CardHeader className="px-0">
                   <div className="flex items-center gap-4 mb-4">
                     <Calendar className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">February 20, 2025</span>
+                    <span className="text-sm text-muted-foreground">May 5, 2025</span>
                     <span className="text-sm text-muted-foreground">•</span>
                     <span className="text-sm text-muted-foreground">Concert Recap</span>
                   </div>
                   <CardTitle className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                    A Night of Romance: Valentine's Tango Concert Recap
+                    Highlights from our inaugural concert
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground">
-                    Our Valentine's Day concert at the Oakland Museum of California was a magical evening filled with
-                    passionate tango melodies and intimate performances.
+                    Great energy on May the 4th&mdash;the Star Wars Day&mdash;at the Gradus ad Parnassum Music Academy
+                    recital hall with special guests Yukie Kawanami and Polina Sedukh. In addition to tango classics,
+                    we played adaptations of a Shostakovich trio, Tango Seis (Piazzolla's hidden gem), and, yes,
+                    a couple of Star Wars covers. Two pianos in the hall? Of course there were piano duos!
+                    {/*TODO: edit text*/}
+                    {/*TODO: add a couple pictures and a couple videos: ALLA CLIP 51:11 + Sveta + Kolbasov */}
+
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-0">
@@ -49,25 +64,7 @@ export default function BlogPage() {
                   />
                   <div className="prose prose-lg max-w-none">
                     <p className="text-foreground mb-4">
-                      On February 18th, Duo Luz de neón transformed the Oakland Museum of California into an intimate
-                      tango salon, captivating an audience of over 150 music lovers with their passionate interpretation
-                      of classic Argentine tangos.
-                    </p>
-                    <p className="text-foreground mb-4">
-                      The evening opened with Piazzolla's "Libertango," setting the tone for a night that would journey
-                      through the golden age of tango music. Violinist María Elena Vásquez and pianist Carlos Mendoza
-                      demonstrated their remarkable chemistry, weaving together melodies that spoke directly to the
-                      heart.
-                    </p>
-                    <p className="text-foreground mb-4">
-                      Highlights included a stunning rendition of "La Cumparsita" and an emotionally charged performance
-                      of "Adiós Nonino." The intimate museum setting allowed for a unique connection between performers
-                      and audience, with many guests commenting on the transformative power of live tango music.
-                    </p>
-                    <p className="text-foreground">
-                      We're grateful to the Oakland Museum of California for hosting us and to our community for their
-                      continued support. Events like these remind us why we're passionate about bringing authentic tango
-                      music to the Bay Area.
+                      It was great to see many old friends and new faces in the audience!
                     </p>
                   </div>
                   <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
