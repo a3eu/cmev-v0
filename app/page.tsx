@@ -19,7 +19,7 @@ export default function HomePage() {
               className="w-48 h-48 mx-auto mb-6 object-contain"
             />
           </div>
-          <h1 className="font-[var(--font-kaushan)] text-4xl md:text-6xl font-bold text-white mb-6">¡Con música en vivo!</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{fontFamily: 'Kaushan Script, cursive'}}>¡Con música en vivo!</h1>
           <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
             Life is better with live music!
           </p>
@@ -407,7 +407,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-[var(--font-kaushan)] text-xl font-bold mb-4">¡Con música en vivo!</h3>
+              <h3 className="text-xl font-bold mb-4" style={{fontFamily: 'Kaushan Script, cursive'}}>¡Con música en vivo!</h3>
               <p className="text-sm text-muted-foreground">
               </p>
             </div>
