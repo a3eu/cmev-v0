@@ -3,25 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
-import Script from "next/script"
 
 export default function WaysToGivePage() {
   return (
     <div className="min-h-screen bg-[#b0c4c4]">
-      <Script
-        src="https://www.paypal.com/sdk/js?client-id=BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA&components=hosted-buttons&enable-funding=venmo&currency=USD"
-        strategy="afterInteractive"
-      />
-      <Script strategy="afterInteractive">
-        {`
-          document.addEventListener("DOMContentLoaded", (event) => {
-            paypal.HostedButtons({
-              hostedButtonId: "TCQXBFL2SMJCY"
-            })
-            .render("#paypal-container-TCQXBFL2SMJCY")
-          })
-        `}
-      </Script>
       <PageHeader title="Ways to Give" />
       
       {/* Introduction */}
