@@ -8,9 +8,9 @@ import Link from "next/link"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#b0c4c4]">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 flex items-center justify-center bg-gradient-to-br from-primary/20 via-accent/10 to-background">
+      <section className="relative py-16 md:py-24 flex items-center justify-center bg-[#4a8b8b]">
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">
             <img 
@@ -19,12 +19,50 @@ export default function HomePage() {
               className="w-48 h-48 mx-auto mb-6 object-contain"
             />
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">¡Con música en vivo!</h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6">¡Con música en vivo!</h1>
+          <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
             Life is better with live music!
           </p>
         </div>
       </section>
+
+      {/* Navigation Bar */}
+      <nav className="bg-[#3e7a7a] py-4 px-4 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto">
+          <ul className="flex flex-wrap justify-center gap-6 md:gap-8 text-white">
+            <li>
+              <a href="#events" className="hover:text-white/80 transition-colors font-medium">
+                Events
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-white/80 transition-colors font-medium">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="hover:text-white/80 transition-colors font-medium">
+                Our Ensembles
+              </a>
+            </li>
+            <li>
+              <Link href="/musicians" className="hover:text-white/80 transition-colors font-medium">
+                Musicians
+              </Link>
+            </li>
+            <li>
+              <a href="#donate" className="hover:text-white/80 transition-colors font-medium">
+                Support
+              </a>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-white/80 transition-colors font-medium">
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       {/* Upcoming Events */}
       <section id="events" className="py-20 px-4">
@@ -206,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-muted/30">
+      <section id="projects" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Projects</h2>
@@ -253,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* Past Events Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Past Events</h2>
@@ -292,7 +330,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-muted/30">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
@@ -365,7 +403,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted py-12 px-4">
+      <footer className="bg-[#3e7a7a] text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
