@@ -19,8 +19,12 @@ export default function HomePage() {
             />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{fontFamily: 'Kaushan Script, cursive'}}>¡Con música en vivo!</h1>
-          <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
-            Life is better with live music!
+          <p
+              style={{
+                opacity: 0.8,
+              }}
+              className="font-serif font-bold text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
+            LIFE IS BETTER WITH LIVE MUSIC
           </p>
         </div>
       </section>
@@ -196,7 +200,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Our mission is to support live performances and training in Argentine Tango and Modern Chamber Music throughout the San Francisco Bay Area and beyond.
+              Our mission is to support live performances and training in Argentine Tango and Modern Chamber Music throughout the San Francisco Bay Area and beyond
             </p>
           </div>
 
@@ -208,7 +212,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Authentic Argentine Tango at tango events
+                  Authentic Argentine Tango music at tango dancing events
                 </CardDescription>
               </CardContent>
             </Card>
@@ -220,7 +224,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Showcasing classic and contemporary tango selections in concert settings.
+                  Showcasing classic and contemporary compositions in concert settings
                 </CardDescription>
               </CardContent>
             </Card>
@@ -232,8 +236,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  Offering lessons and coaching in tango and chamber music (violin, bandoneón, ensemble),
-                  as well as tango music and musicality seminars for dancers
+                  Sharing our knowledge in tango and chamber music with musicians, dancers, and audiences
                 </CardDescription>
               </CardContent>
             </Card>
@@ -277,7 +280,7 @@ export default function HomePage() {
                 }}
               />
               <CardHeader>
-                <CardTitle className="font-serif text-xl">Duo Luz de neón</CardTitle>
+                <CardTitle className="font-serif text-xl">Luz de neón</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
