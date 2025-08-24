@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, ArrowLeft, Music, Users } from "lucide-react"
+import { Calendar, Music, Users } from "lucide-react"
+import PageHeader from "@/components/page-header"
+import PageFooter from "@/components/page-footer"
 import Link from "next/link"
 
 
@@ -15,21 +17,11 @@ import Link from "next/link"
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="py-12 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-6">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Blog</h1>
-          <p className="text-lg text-muted-foreground"></p>
-        </div>
-      </header>
+    <div className="min-h-screen bg-[#b0c4c4]">
+      <PageHeader title="Blog" />
 
       {/* Blog Posts */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-12">
             {/* Concert Recap Post */}
@@ -155,74 +147,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-muted py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-serif text-xl font-bold mb-4">CMEV</h3>
-              <p className="text-sm text-muted-foreground">
-                Supporting live performances and training in Argentine Tango and Chamber Music
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/" className="text-muted-foreground hover:text-primary">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-muted-foreground hover:text-primary">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#events" className="text-muted-foreground hover:text-primary">
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#projects" className="text-muted-foreground hover:text-primary">
-                    Projects
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Get Involved</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/#donate" className="text-muted-foreground hover:text-primary">
-                    Donate
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/house-concerts" className="text-muted-foreground hover:text-primary">
-                    Host Event
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>SF Bay Area</li>
-                <li>info@cmev.org</li>
-                <li>(555) 123-4567</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-8 pt-8 text-center">
-            <p className="text-sm text-muted-foreground">© 2025 CMEV. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <PageFooter />
     </div>
   )
 }

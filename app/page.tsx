@@ -65,7 +65,7 @@ export default function HomePage() {
       </nav>
 
       {/* Upcoming Events */}
-      <section id="events" className="py-20 px-4">
+      <section id="events" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Upcoming Events</h2>
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4">
+      <section id="about" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">About us</h2>
@@ -319,13 +319,7 @@ export default function HomePage() {
 
           </div>
 
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/blog" className="text-lg px-4">
-                Read Our Blog
-              </Link>
-            </Button>
-          </div>
+
         </div>
       </section>
 
@@ -357,7 +351,7 @@ export default function HomePage() {
       </section>
 
       {/* Support Section */}
-      <section id="donate" className="py-20 px-4">
+      <section id="donate" className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Support Our Mission</h2>
           <p className="text-lg text-muted-foreground mb-12">

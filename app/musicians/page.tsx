@@ -1,22 +1,18 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Mail, Globe } from "lucide-react"
-import Link from "next/link"
+import { Mail, Globe } from "lucide-react"
+import PageHeader from "@/components/page-header"
+import PageFooter from "@/components/page-footer"
 
 export default function MusiciansPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <section className="py-12 px-4 bg-muted/30">
+    <div className="min-h-screen bg-[#b0c4c4]">
+      <PageHeader title="Our Musicians" />
+      
+      {/* Content */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <Button variant="ghost" asChild className="mb-6">
-            <Link href="/" className="flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-          </Button>
-          <div className="text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Our Musicians</h1>
+          <div className="text-center mb-16">
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Meet the talented artists who bring Argentine Tango and Chamber Music to life in the SF Bay Area
             </p>
@@ -25,7 +21,7 @@ export default function MusiciansPage() {
       </section>
 
       {/* Musicians Bios */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Musician 1 */}
@@ -132,6 +128,8 @@ export default function MusiciansPage() {
           </div>
         </div>
       </section>
+      
+      <PageFooter />
     </div>
   )
 }
