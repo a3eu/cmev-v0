@@ -1,28 +1,24 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
-import Script from "next/script"
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
+
+const initialOptions = {
+  "client-id": "BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA",
+  currency: "USD",
+  intent: "capture",
+  "enable-funding": "venmo"
+};
 
 export default function WaysToGivePage() {
   return (
-    <div className="min-h-screen bg-[#b0c4c4]">
-      <Script
-        src="https://www.paypal.com/sdk/js?client-id=BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA&components=hosted-buttons&enable-funding=venmo&currency=USD"
-        strategy="afterInteractive"
-      />
-      <Script strategy="afterInteractive">
-        {`
-          document.addEventListener("DOMContentLoaded", (event) => {
-            paypal.HostedButtons({
-              hostedButtonId: "TCQXBFL2SMJCY"
-            })
-            .render("#paypal-container-TCQXBFL2SMJCY")
-          })
-        `}
-      </Script>
-      <PageHeader title="Ways to Give" />
+    <PayPalScriptProvider options={initialOptions}>
+      <div className="min-h-screen bg-[#b0c4c4]">
+        <PageHeader title="Ways to Give" />
       
       {/* Introduction */}
       <section className="py-20 px-4 bg-[#f0f8f8]">
@@ -44,6 +40,49 @@ export default function WaysToGivePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
+            {/* PayPal Donation */}
+            <Card className="p-6 border-2 border-primary">
+              <CardHeader className="text-center">
+                <CreditCard className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl mb-2">Donate with PayPal</CardTitle>
+                <CardDescription className="text-base">
+                  Quick and secure online donations
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground mb-6">
+                  Support our mission with a secure PayPal donation. Choose your amount and contribute directly to our live music programs.
+                </p>
+                <PayPalButtons
+                  createOrder={(data, actions) => {
+                    return actions.order.create({
+                      purchase_units: [
+                        {
+                          amount: {
+                            value: "25.00", // Default donation amount
+                          },
+                        },
+                      ],
+                    });
+                  }}
+                  onApprove={(data, actions) => {
+                    return actions.order.capture().then((details) => {
+                      const name = details.payer.name.given_name;
+                      alert(`Transaction completed by ${name}`);
+                    });
+                  }}
+                  style={{
+                    layout: "vertical",
+                    color: "gold",
+                    shape: "rect",
+                    label: "donate"
+                  }}
+                />
+                <p className="text-sm text-muted-foreground mt-4">
+                  Secure payment processing by PayPal
+                </p>
+              </CardContent>
+            </Card>
             {/* One-Time Donation */}
             <Card className="p-6">
               <CardHeader className="text-center">
@@ -193,7 +232,8 @@ export default function WaysToGivePage() {
         </div>
       </section>
       
-      <PageFooter />
-    </div>
+        <PageFooter />
+      </div>
+    </PayPalScriptProvider>
   )
 }
