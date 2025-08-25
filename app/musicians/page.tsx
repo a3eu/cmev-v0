@@ -161,7 +161,7 @@ export default function MusiciansPage() {
                   <img src="/yukie-publicity.jpg" alt="Yukie Kawanami photo" className="w-full h-full object-cover object-center" />
                 </div>
 
-                <p className="mt-4 text-muted-foreground mb-4">
+                <div className="mt-4 text-muted-foreground mb-4">
 
                   <div className="flex gap-4">
                     <Button variant="outline" size="sm">
@@ -169,7 +169,7 @@ export default function MusiciansPage() {
                       <Link href={`https://yukiekawanami3.webnode.jp/`}>Website</Link>
                     </Button>
                   </div>
-                </p>
+                </div>
               </CardContent>
             </Card>
 
