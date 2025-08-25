@@ -4,8 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
-  basePath: process.env.NODE_ENV === 'production' ? '/bold' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/bold' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/cmev-v0' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cmev-v0' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
