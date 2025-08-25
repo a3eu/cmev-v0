@@ -4,6 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
+  basePath: process.env.NODE_ENV === 'production' ? '/bold' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/bold' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
