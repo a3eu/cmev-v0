@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">
             <img 
-              src="/cmev-logo-web-1.png" 
+              src="/v2/cmev-logo-web-1.png" 
               alt="¡Con música en vivo! Logo" 
               className="w-48 h-48 mx-auto mb-6 object-contain"
             />
@@ -280,7 +280,7 @@ export default function HomePage() {
             <Card className="overflow-hidden">
               <div className="relative w-full aspect-video bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('/luz-de-neon-publicity-1.jpg')",
+                  backgroundImage: "url('/v2/luz-de-neon-publicity-1.jpg')",
                 }}
               />
               <CardHeader>
