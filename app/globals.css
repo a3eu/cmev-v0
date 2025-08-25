@@ -6,17 +6,17 @@
 :root {
   --background: #ffffff;
   --foreground: #374151;
-  --card: #fefce8;
+  --card: #dbe5e6;
   --card-foreground: #374151;
   --popover: #ffffff;
   --popover-foreground: #374151;
-  --primary: #d97706;
+  --primary: #1f2937;
   --primary-foreground: #ffffff;
   --secondary: #f97316;
   --secondary-foreground: #ffffff;
-  --muted: #fefce8;
+  --muted: #dbe5e6;
   --muted-foreground: #374151;
-  --accent: #f97316;
+  --accent: #374151;
   --accent-foreground: #ffffff;
   --destructive: #be123c;
   --destructive-foreground: #ffffff;

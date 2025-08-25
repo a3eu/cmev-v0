@@ -56,7 +56,7 @@ export default function HomePage() {
             </li>
             <li>
               <Link href="/ways-to-give" className="hover:text-white/80 transition-colors font-medium">
-                Support
+                Support Us
               </Link>
             </li>
             <li>
@@ -376,7 +376,7 @@ export default function HomePage() {
             <Card className="p-6 text-center">
               <CardTitle className="font-serif text-xl mb-4">Donate</CardTitle>
               <CardDescription className="mb-4">Support our musicians and educational programs</CardDescription>
-              <Button asChild><Link href="/ways-to-give">Make a Donation</Link></Button>
+              <Button variant="outline"><Link href="/ways-to-give">Make a Donation</Link></Button>
             </Card>
 
             <Card className="p-6 text-center">

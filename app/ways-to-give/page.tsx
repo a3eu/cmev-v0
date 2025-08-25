@@ -26,6 +26,9 @@ export default function WaysToGivePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Help Bring Live Music to Dancers and Audiences</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            First and foremost, thank you for coming to our performances! This already supports us and means a lot to us.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             As is often the case with performing arts groups, ticket sales only cover a fraction of our expenses.
           </p>
           <p className="mt-4 text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
