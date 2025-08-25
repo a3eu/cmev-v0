@@ -388,7 +388,7 @@ export default function HomePage() {
 
           {/* Newsletter Signup */}
           <Card className="p-0 overflow-hidden">
-            <div className="relative w-full h-96 bg-amber-200">
+            <div className="relative w-full h-64 bg-amber-200">
               <iframe 
                 title="Signup form powered by Zeffy" 
                 style={{
@@ -401,8 +401,8 @@ export default function HomePage() {
                   width: '100%',
                   height: '100%'
                 }}
-                src="https://www.zeffy.com/en-US/embed/newsletter-form/join-our-mailing-list-4" 
-                allowTransparency={true}
+                src="https://www.zeffy.com/en-US/embed/newsletter-form/join-our-mailing-list-4"
+                allowtransparency={"true"}
               />
             </div>
           </Card>
