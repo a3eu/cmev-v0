@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Mail, Globe } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
-import Link from "next/link";
+import Link from "next/link"
+import { getAssetUrl } from "@/lib/utils"
 
 export default function MusiciansPage() {
   return (
@@ -22,7 +23,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/keiko-cadby-publicity.jpg" alt="Keiko Cadby photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/keiko-cadby-publicity.jpg")} alt="Keiko Cadby photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -45,7 +46,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/naomi-kawabata-publicity.jpg" alt="Naomi Kawabata photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/naomi-kawabata-publicity.jpg")} alt="Naomi Kawabata photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -61,7 +62,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/sarah-wu-publicity.jpg" alt="Sarah Wu photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/sarah-wu-publicity.jpg")} alt="Sarah Wu photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -81,7 +82,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/mariya-borozina-publicity.jpg" alt="Mariya Borozina photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/mariya-borozina-publicity.jpg")} alt="Mariya Borozina photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -96,7 +97,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/polina-sedukh-458x458.jpg.webp" alt="Polina Sedukh photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/polina-sedukh-458x458.jpg.webp")} alt="Polina Sedukh photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -111,7 +112,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/angela-lee-publicity.jpg" alt="Angela Lee photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/angela-lee-publicity.jpg")} alt="Angela Lee photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -131,7 +132,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/alexander-zeyliger-publicity.jpeg" alt="Alexander Zeyliger photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/alexander-zeyliger-publicity.jpeg")} alt="Alexander Zeyliger photo" className="w-full h-full object-cover object-center" />
                   <span className="text-sm text-muted-foreground text-right">Photo <a href="http://www.styush.com/about-me"
                                                                                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
                   >Styush</a></span>
@@ -158,7 +159,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/yukie-publicity.jpg" alt="Yukie Kawanami photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/yukie-publicity.jpg")} alt="Yukie Kawanami photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <div className="mt-4 text-muted-foreground mb-4">
@@ -180,7 +181,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/crystie-shum-publicity.jpg" alt="Crystie Shum photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/crystie-shum-publicity.jpg")} alt="Crystie Shum photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -196,7 +197,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/Svetlana-publicity.jpg" alt="Svetlana Shnitser photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/Svetlana-publicity.jpg")} alt="Svetlana Shnitser photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -211,7 +212,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/ken-miller-publicity.jpg" alt="Ken Miller photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/ken-miller-publicity.jpg")} alt="Ken Miller photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">
@@ -227,7 +228,7 @@ export default function MusiciansPage() {
               </CardHeader>
               <CardContent>
                 <div className="w-full max-w-2xl text-right">
-                  <img src="/chris-johnson-publicity.jpg" alt="Chris Johnson photo" className="w-full h-full object-cover object-center" />
+                  <img src={getAssetUrl("/chris-johnson-publicity.jpg")} alt="Chris Johnson photo" className="w-full h-full object-cover object-center" />
                 </div>
 
                 <p className="mt-4 text-muted-foreground mb-4">

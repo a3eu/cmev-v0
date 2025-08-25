@@ -4,6 +4,7 @@ import { Calendar, Music, Users } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
 import Link from "next/link"
+import { getAssetUrl } from "@/lib/utils"
 
 
 // TODO:
@@ -42,7 +43,7 @@ export default function BlogPage() {
                 </CardHeader>
                 <CardContent className="px-0">
                   <div className="w-full max-w-2xl text-right">
-                    <img src="/20250504-453.jpg" alt="concert photo" className="w-full h-full object-cover object-center" />
+                    <img src={getAssetUrl("/20250504-453.jpg")} alt="concert photo" className="w-full h-full object-cover object-center" />
                     <span className="text-sm text-muted-foreground text-right">Photo <a href="https://www.instagram.com/akolb4/"
                                                                              className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
                     >Alex Kolbasov</a></span>
