@@ -26,8 +26,11 @@ export default function WaysToGivePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Help Bring Live Music to Dancers and Audiences</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Your generosity helps us continue bringing the beauty of Argentine Tango and Chamber Music to audiences 
-            throughout the San Francisco Bay Area. Every contribution, no matter the size, makes a meaningful difference 
+            As is often the case with performing arts groups, ticket sales only cover a fraction of our expenses.
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Your generosity helps us continue bringing the beauty of Argentine Tango and Chamber Music to audiences
+            throughout the San Francisco Bay Area. Every contribution, no matter the size, makes a meaningful difference
             in supporting our musicians and educational programs.
           </p>
         </div>

@@ -38,111 +38,67 @@ export default function BlogPage() {
                     Highlights from our inaugural concert
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground">
-                    Great energy on May the 4th&mdash;the Star Wars Day&mdash;at the Gradus ad Parnassum Music Academy
-                    recital hall with special guests Yukie Kawanami and Polina Sedukh. In addition to tango classics,
-                    we played adaptations of a Shostakovich trio, Tango Seis (Piazzolla's hidden gem), and, yes,
-                    a couple of Star Wars covers. Two pianos in the hall? Of course there were piano duos!
-                    {/*TODO: edit text*/}
-                    {/*TODO: add a couple pictures and a couple videos: ALLA CLIP 51:11 + Sveta + Kolbasov */}
-
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-0">
-                  <div
-                    className="w-full h-64 bg-cover bg-center rounded-lg mb-6"
-                    style={{
-                      backgroundImage: "url('/intimate-violin-piano-duo.png')",
-                    }}
-                  />
-                  <div className="prose prose-lg max-w-none">
+                  <div className="w-full max-w-2xl text-right">
+                    <img src="/20250504-453.jpg" alt="concert photo" className="w-full h-full object-cover object-center" />
+                    <span className="text-sm text-muted-foreground text-right">Photo <a href="https://www.instagram.com/akolb4/"
+                                                                             className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                    >Alex Kolbasov</a></span>
+                  </div>
+                  <div className="mt-8 prose prose-lg max-w-none">
                     <p className="text-foreground mb-4">
-                      It was great to see many old friends and new faces in the audience!
+                      Great energy on May the 4th&mdash;the Star Wars Day&mdash;at the Gradus ad Parnassum Music Academy
+                      recital hall with special guests Yukie Kawanami and Polina Sedukh. In addition to tango classics,
+                      we played adaptations of a Shostakovich trio, Piazzolla's hidden gem Tango Seis, and, yes,
+                      a couple of Star Wars covers. With pianos in the hall, were piano duos, too!
                     </p>
+                    <p className="text-foreground mb-4">
+                    It was great to see many old friends and new faces in the audience!
+                    </p>
+                  </div>
+                  <div className="mt-4 relative w-full aspect-video">
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/zVKURTMEeo8"
+                        title="Shostakovich Trio"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    />
+                  </div>
+                  <div className="mt-4 relative w-full aspect-video">
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/Vo1_ScX0PTc"
+                        title="Más allá del tango"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    />
+                  </div>
+                  <div className="mt-4 relative w-full aspect-video">
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/ebyYhNKwayM"
+                        title="La yumba"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    />
                   </div>
                   <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
                     <Music className="w-5 h-5 text-primary" />
                     <span className="text-sm text-muted-foreground">
-                      Next concert: Chamber Music House Concert on March 15th
+                      Don't miss: a <a href="https://www.zeffy.com/en-US/ticketing/tango-y-mas"
+                                       className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                    >out next concert</a> at Gradus Ad Parnassum on Sunday Music Academy, Oct 14, 2025, 2pm.
                     </span>
                   </div>
                 </CardContent>
               </Card>
             </article>
-
-            {/* Tango Music Post */}
-            <article>
-              <Card className="border-0 shadow-none p-0">
-                <CardHeader className="px-0">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Calendar className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">February 10, 2025</span>
-                    <span className="text-sm text-muted-foreground">•</span>
-                    <span className="text-sm text-muted-foreground">Music Education</span>
-                  </div>
-                  <CardTitle className="font-serif text-3xl md:text-4xl font-bold mb-4">
-                    Understanding Tango Music: Beyond the Dance
-                  </CardTitle>
-                  <CardDescription className="text-lg text-muted-foreground">
-                    Exploring the rich musical heritage of Argentine tango and its evolution from the streets of Buenos
-                    Aires to concert halls worldwide.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="px-0">
-                  <div
-                    className="w-full h-64 bg-cover bg-center rounded-lg mb-6"
-                    style={{
-                      backgroundImage: "url('/argentine-tango-orchestra.png')",
-                    }}
-                  />
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-foreground mb-4">
-                      When most people hear "tango," they immediately think of the passionate dance that has captivated
-                      audiences worldwide. However, tango music stands as a sophisticated art form in its own right,
-                      with a rich history that extends far beyond the dance floor.
-                    </p>
-                    <p className="text-foreground mb-4">
-                      Born in the late 19th century in the working-class neighborhoods of Buenos Aires and Montevideo,
-                      tango music emerged from a unique fusion of African rhythms, European harmonies, and indigenous
-                      South American melodies. The bandoneon, a German concertina that became the soul of tango, arrived
-                      in Argentina around 1870 and quickly became the defining sound of this new musical genre.
-                    </p>
-                    <p className="text-foreground mb-4">
-                      The golden age of tango (1935-1955) saw the rise of legendary orchestras led by Carlos Di Sarli,
-                      Juan D'Arienzo, and Aníbal Troilo. These maestros developed distinct styles that are still studied
-                      and performed today. Di Sarli's elegant, flowing arrangements contrasted beautifully with
-                      D'Arienzo's rhythmic intensity, while Troilo brought a romantic sensibility that influenced
-                      generations of musicians.
-                    </p>
-                    <p className="text-foreground mb-4">
-                      Astor Piazzolla revolutionized tango in the 1960s by incorporating elements of jazz and classical
-                      music, creating "nuevo tango." His compositions like "Libertango" and "Adiós Nonino" demonstrated
-                      that tango could evolve while maintaining its essential character and emotional depth.
-                    </p>
-                    <p className="text-foreground">
-                      At CMEV, we celebrate both traditional and contemporary tango music, recognizing that this genre
-                      continues to evolve while honoring its roots. Whether performed in an intimate house concert or a
-                      grand concert hall, tango music has the power to transport listeners to the cobblestone streets of
-                      Buenos Aires and touch the deepest emotions of the human experience.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
-                    <Users className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">
-                      Join our tango musicality classes to deepen your understanding
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </article>
-          </div>
-
-          {/* Back to Home */}
-          <div className="text-center mt-16">
-            <Link href="/">
-              <Button size="lg" variant="outline">
-                Return to Home
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
