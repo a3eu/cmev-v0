@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/v2',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
