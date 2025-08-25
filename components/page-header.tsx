@@ -12,7 +12,7 @@ export default function PageHeader({ title }: PageHeaderProps) {
         <div className="max-w-6xl mx-auto px-4 flex items-center gap-6">
           <div className="flex-shrink-0">
             <img 
-              src="/cmev-logo-web-1.png" 
+              src="/v2/cmev-logo-web-1.png" 
               alt="¡Con música en vivo! Logo" 
               className="w-24 h-24 object-contain"
             />
