@@ -11,9 +11,8 @@ const kaushanScript = Kaushan_Script({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: '¡Con música en vivo!',
+  description: '¡Con música en vivo! web site'
 }
 
 export default function RootLayout({
