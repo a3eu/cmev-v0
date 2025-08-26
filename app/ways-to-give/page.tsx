@@ -6,7 +6,7 @@ import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
 import Link from "next/link";
-import { PayPalButtons, PayPalScriptProvider, ReactPayPalScriptOptions } from '@paypal/react-paypal-js';
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 
 const initialOptions = {
   "client-id": "BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA",
@@ -17,6 +17,7 @@ const initialOptions = {
 
 export default function WaysToGivePage() {
   return (
+    <PayPalScriptProvider options={initialOptions}>
       <div className="min-h-screen bg-[#b0c4c4]">
         <PageHeader title="Ways to Give" />
       
@@ -66,9 +67,31 @@ export default function WaysToGivePage() {
                 </Button>
                 <p className="text-muted-foreground mb-6">
                 </p>
-                <PayPalScriptProvider options={initialOptions}>
-                  <PayPalButtons />
-                </PayPalScriptProvider>
+                <PayPalButtons
+                    createOrder={(data, actions) => {
+                      return actions.order.create({
+                        purchase_units: [
+                          {
+                            amount: {
+                              value: "100.00", // Default donation amount
+                            },
+                          },
+                        ],
+                      });
+                    }}
+                    onApprove={(data, actions) => {
+                      return actions.order.capture().then((details) => {
+                        const name = details.payer.name.given_name;
+                        alert(`Transaction completed by ${name}`);
+                      });
+                    }}
+                    style={{
+                      layout: "vertical",
+                      color: "gold",
+                      shape: "rect",
+                      label: "donate"
+                    }}
+                />
               </CardContent>
             </Card>
 
@@ -174,5 +197,6 @@ export default function WaysToGivePage() {
       
         <PageFooter />
       </div>
+    </PayPalScriptProvider>
   )
 }
