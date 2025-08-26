@@ -6,7 +6,6 @@ import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
 import Link from "next/link";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 
 const initialOptions = {
   "client-id": "BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA",
@@ -17,7 +16,6 @@ const initialOptions = {
 
 export default function WaysToGivePage() {
   return (
-    <PayPalScriptProvider options={initialOptions}>
       <div className="min-h-screen bg-[#b0c4c4]">
         <PageHeader title="Ways to Give" />
       
@@ -59,39 +57,23 @@ export default function WaysToGivePage() {
               <CardContent className="text-center">
                 <p className="text-muted-foreground mb-6">
                 </p>
-                <Button className="w-full mb-4">By credit card
-                  <Link href={`https://donate.stripe.com/eVqbJ3gCIdSj3RL3e3dfG00`}>(processed by Stripe)</Link>
+                <Button className="w-full mb-4"
+                        onClick={() => window.open("https://donate.stripe.com/eVqbJ3gCIdSj3RL3e3dfG00", "_blank")}
+                >
+                  By credit card (processed By Stripe)
                 </Button>
-                <Button className="w-full mb-4">By credit card
-                  <Link href={`https://www.zeffy.com/en-US/donation-form/support-live-music`}>(processed by Zeffy)</Link>
+                <Button className="w-full mb-4"
+                        onClick={() => window.open("https://www.zeffy.com/en-US/donation-form/support-live-music", "_blank")}
+                >
+                  By credit card (processed By Zeffy)
+                </Button>
+                <Button className="w-full mb-4"
+                        onClick={() => window.open("https://www.paypal.com/donate/?hosted_button_id=5BZYKQ76ZFRLQ", "_blank")}
+                >
+                  By PayPal
                 </Button>
                 <p className="text-muted-foreground mb-6">
                 </p>
-                <PayPalButtons
-                    createOrder={(data, actions) => {
-                      return actions.order.create({
-                        purchase_units: [
-                          {
-                            amount: {
-                              value: "100.00", // Default donation amount
-                            },
-                          },
-                        ],
-                      });
-                    }}
-                    onApprove={(data, actions) => {
-                      return actions.order.capture().then((details) => {
-                        const name = details.payer.name.given_name;
-                        alert(`Transaction completed by ${name}`);
-                      });
-                    }}
-                    style={{
-                      layout: "vertical",
-                      color: "gold",
-                      shape: "rect",
-                      label: "donate"
-                    }}
-                />
               </CardContent>
             </Card>
 
@@ -197,6 +179,5 @@ export default function WaysToGivePage() {
       
         <PageFooter />
       </div>
-    </PayPalScriptProvider>
   )
 }
