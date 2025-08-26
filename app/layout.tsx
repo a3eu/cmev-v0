@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Kaushan_Script } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
-import PageHeader from "@/components/page-header";
 
 const kaushanScript = Kaushan_Script({ 
   subsets: ['latin'],
@@ -26,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" strategy="afterInteractive"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />

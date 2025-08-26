@@ -1,189 +1,178 @@
 "use client"
 
-import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {Heart, Users, Music, Gift, CreditCard, Building} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Heart, Users, Music, Gift, CreditCard, Building } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import PageFooter from "@/components/page-footer"
 import Link from "next/link";
-import Script from "next/script";
+import { PayPalButtons, PayPalScriptProvider, ReactPayPalScriptOptions } from '@paypal/react-paypal-js';
+
+const initialOptions = {
+  "client-id": "AWeOKZiKSyiSEDZzPvYwLLi4ny0oo-0ojNGcpVdNYnrnNQMNxUrWJ2Rbfpqf2UqOXTNgun41fMkGfHwW",
+  currency: "USD",
+  intent: "capture",
+  "enable-funding": "venmo"
+};
 
 export default function WaysToGivePage() {
   return (
       <div className="min-h-screen bg-[#b0c4c4]">
-        <PageHeader title="Ways to Give"/>
+        <PageHeader title="Ways to Give" />
+      
+      {/* Introduction */}
+      <section className="py-20 px-4 bg-[#f0f8f8]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Help Bring Live Music to Dancers and Audiences</h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            First and foremost, thank you for coming to our performances! This already supports us and means a lot to us.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            As is often the case with performing arts groups, ticket sales only cover a fraction of our expenses.
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Your generosity helps us continue bringing the beauty of Argentine Tango and Chamber Music to audiences
+            throughout the San Francisco Bay Area. Every contribution, no matter the size, makes a meaningful difference
+            in supporting our musicians and educational programs.
+          </p>
+        </div>
+      </section>
 
-        {/* Introduction */}
-        <section className="py-20 px-4 bg-[#f0f8f8]">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Help Bring Live Music to
-              Dancers and Audiences</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              First and foremost, thank you for coming to our performances! This already supports us and means a lot to
-              us.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              As is often the case with performing arts groups, ticket sales only cover a fraction of our expenses.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Your generosity helps us continue bringing the beauty of Argentine Tango and Chamber Music to audiences
-              throughout the San Francisco Bay Area. Every contribution, no matter the size, makes a meaningful
-              difference
-              in supporting our musicians and educational programs.
-            </p>
+      {/* Ways to Give */}
+      <section className="py-20 px-4 bg-[#f0f8f8]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Ways to Contribute</h2>
           </div>
-        </section>
 
-        {/* Ways to Give */}
-        <section className="py-20 px-4 bg-[#f0f8f8]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Ways to Contribute</h2>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Donation */}
+            <Card className="p-6">
+              <CardHeader className="text-center">
+                <CreditCard className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl mb-2">Donate Online</CardTitle>
+                <CardDescription className="text-base">
+                  Your tax-deductible gift directly funds live performances
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground mb-6">
+                </p>
+                <Button className="w-full mb-4">By credit card
+                  <Link href={`https://donate.stripe.com/eVqbJ3gCIdSj3RL3e3dfG00`}>(processed by Stripe)</Link>
+                </Button>
+                <Button className="w-full mb-4">By credit card
+                  <Link href={`https://www.zeffy.com/en-US/donation-form/support-live-music`}>(processed by Zeffy)</Link>
+                </Button>
+                <p className="text-muted-foreground mb-6">
+                </p>
+                <PayPalScriptProvider options={initialOptions}>
+                  <PayPalButtons />
+                </PayPalScriptProvider>
+              </CardContent>
+            </Card>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Donation */}
-              <Card className="p-6">
-                <CardHeader className="text-center">
-                  <CreditCard className="w-12 h-12 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-2xl mb-2">Donate Online</CardTitle>
-                  <CardDescription className="text-base">
-                    Your tax-deductible gift directly funds live performances
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-6">
-                  </p>
-                  <Button className="w-full mb-4">By credit card
-                    <Link href={`https://donate.stripe.com/eVqbJ3gCIdSj3RL3e3dfG00`}>(processed by Stripe)</Link>
-                  </Button>
-                  <Button className="w-full mb-4">By credit card
-                    <Link href={`https://www.zeffy.com/en-US/donation-form/support-live-music`}>(processed by
-                      Zeffy)</Link>
-                  </Button>
-                  <p className="text-muted-foreground mb-6">
-                  </p>
+            {/* Corporate Sponsorship */}
+            <Card className="p-6">
+              <CardHeader className="text-center">
+                <Building className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl mb-2">Corporate Sponsorship</CardTitle>
+                <CardDescription className="text-base">
+                  Partner with us to support live music in your community!
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground mb-6">
+                  Corporate sponsors receive recognition at events, in programs, and on our website. 
+                </p>
+                <p className="text-muted-foreground mb-6">
+                  Email info@conmusicaenvivo.org to explore sponsorship opportunities
+                </p>
+              </CardContent>
+            </Card>
 
-                  <div id="paypal-donate-button-container">
-                    <div id="paypal-donate-button"></div>
-                    <Script id="paypal-inline-script">
-                      {`
-                      PayPal.Donation.Button({
-                          "env": 'production',
-                          "hosted_button_id": '5BZYKQ76ZFRLQ',
-                          "image": {
-                            "src": 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                            "alt": 'Donate with PayPal button',
-                            "title": 'PayPal - The safer, easier way to pay online!',
-                          }}).render('#paypal-donate-button');
-                      `}
-                    </Script>
-                  </div>
-
-                </CardContent>
-              </Card>
-
-              {/* Corporate Sponsorship */}
-              <Card className="p-6">
-                <CardHeader className="text-center">
-                  <Building className="w-12 h-12 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-2xl mb-2">Corporate Sponsorship</CardTitle>
-                  <CardDescription className="text-base">
-                    Partner with us to support live music in your community!
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-6">
-                    Corporate sponsors receive recognition at events, in programs, and on our website.
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    Email info@conmusicaenvivo.org to explore sponsorship opportunities
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Other Sponsorship */}
-              <Card className="p-6">
-                <CardHeader className="text-center">
-                  <Gift className="w-12 h-12 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-2xl mb-2">Other Giving</CardTitle>
-                  <CardDescription className="text-base"></CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground mb-6">
-                    We will be honored if you donated to us through a donor-advised fund
-                    or your employer's matching fund program.
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    Please reach out if you would like to host a fundraising event for us,
-                    offer a matching gift, make a gift in honor of someone, ro sponsor a specific program.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Other Sponsorship */}
+            <Card className="p-6">
+              <CardHeader className="text-center">
+                <Gift className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-2xl mb-2">Other Giving</CardTitle>
+                <CardDescription className="text-base"></CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground mb-6">
+                  We will be honored if you donated to us through a donor-advised fund
+                  or your employer's matching fund program.
+                </p>
+                <p className="text-muted-foreground mb-6">
+                  Please reach out if you would like to host a fundraising event for us,
+                  offer a matching gift, make a gift in honor of someone, ro sponsor a specific program.
+                </p>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Other Ways to Help */}
-        <section className="py-20 px-4 bg-[#f0f8f8]">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Other Ways to Help</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center p-6">
-                <CardHeader>
-                  <Gift className="w-10 h-10 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-xl">In-Kind Donations</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm">
-                    Donate instruments, equipment, or professional services to support our work.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center p-6">
-                <CardHeader>
-                  <Users className="w-10 h-10 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-xl">Volunteer</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm">
-                    Share your time and talents to help with events, administration, or outreach.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center p-6">
-                <CardHeader>
-                  <Heart className="w-10 h-10 text-primary mx-auto mb-4"/>
-                  <CardTitle className="font-serif text-xl">Host an Event</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm">
-                    Open your home for a house concert and help us reach new audiences.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
+      {/* Other Ways to Help */}
+      <section className="py-20 px-4 bg-[#f0f8f8]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Other Ways to Help</h2>
           </div>
-        </section>
 
-        {/* Contact Section */}
-        <section className="py-20 px-4 bg-[#f0f8f8]">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Questions About Giving?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              We're here to help you find the best way to support our mission.
-              Contact us to discuss donation options or learn more about our programs.
-              Email: info@conmusicaenvivo.org
-            </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center p-6">
+              <CardHeader>
+                <Gift className="w-10 h-10 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-xl">In-Kind Donations</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm">
+                  Donate instruments, equipment, or professional services to support our work.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6">
+              <CardHeader>
+                <Users className="w-10 h-10 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-xl">Volunteer</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm">
+                  Share your time and talents to help with events, administration, or outreach.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6">
+              <CardHeader>
+                <Heart className="w-10 h-10 text-primary mx-auto mb-4" />
+                <CardTitle className="font-serif text-xl">Host an Event</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm">
+                  Open your home for a house concert and help us reach new audiences.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <PageFooter/>
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-[#f0f8f8]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">Questions About Giving?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            We're here to help you find the best way to support our mission. 
+            Contact us to discuss donation options or learn more about our programs.
+            Email: info@conmusicaenvivo.org
+          </p>
+        </div>
+      </section>
+      
+        <PageFooter />
       </div>
   )
 }
