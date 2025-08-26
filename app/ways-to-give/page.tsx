@@ -9,7 +9,7 @@ import Link from "next/link";
 import { PayPalButtons, PayPalScriptProvider, ReactPayPalScriptOptions } from '@paypal/react-paypal-js';
 
 const initialOptions = {
-  "client-id": "BAA5dv8UNz_H8rEZwPXdwLB6ZHB6LCKk-PaJTK5geTmQ35UL1v8yf0qifqR6-mVOh8LiKtFbuGfQAdmJUA",
+  "client-id": "AWeOKZiKSyiSEDZzPvYwLLi4ny0oo-0ojNGcpVdNYnrnNQMNxUrWJ2Rbfpqf2UqOXTNgun41fMkGfHwW",
   currency: "USD",
   intent: "capture",
   "enable-funding": "venmo"
