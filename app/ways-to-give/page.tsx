@@ -72,6 +72,11 @@ export default function WaysToGivePage() {
                 >
                   By PayPal
                 </Button>
+                <Button className="w-full mb-4"
+                        onClick={() => window.open("https://account.venmo.com/u/ConMusicaEnVivo", "_blank")}
+                >
+                  By Venmo
+                </Button>
                 <p className="text-muted-foreground mb-6">
                 </p>
               </CardContent>
